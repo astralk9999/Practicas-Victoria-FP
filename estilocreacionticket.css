@@ -1,5 +1,13 @@
-/* Estilos personalizados que complementan Bootstrap */
+/* Variables de color */
+:root {
+    --color-primary: #3498db;
+    --color-secondary: #2ecc71;
+    --color-accent: #e74c3c;
+    --color-background: #f8f9fa;
+    --color-text: #343a40;
+}
 
+/* Modo oscuro */
 body.dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -20,32 +28,62 @@ body.dark-mode .form-select:focus {
 }
 
 body.dark-mode .text-primary {
-    color: #ff8c42 !important;
+    color: var(--color-primary) !important;
 }
 
 body.dark-mode .border-primary {
-    border-color: #ff8c42 !important;
+    border-color: var(--color-primary) !important;
 }
 
-body.dark-mode .btn-primary {
-    background-color: #ff8c42;
-    border-color: #ff8c42;
+/* Estilos específicos para el tema */
+.theme-toggle .btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
-body.dark-mode .btn-primary:hover {
-    background-color: #e67e22;
-    border-color: #e67e22;
-}
-
-body.dark-mode .nav-link {
-    color: #ff8c42 !important;
-}
-
-body.dark-mode .nav-link:hover {
-    color: #e67e22 !important;
-}
-
-/* Mantener estilos específicos que no están en Bootstrap */
 .user-menu {
+    color: var(--color-primary);
     cursor: pointer;
+}
+
+/* Sobreescribir colores de Bootstrap */
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--color-primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-success {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.btn-danger {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode .btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+body.dark-mode .navbar .nav-link {
+    color: var(--color-primary) !important;
+}
+
+body.dark-mode .navbar .nav-link:hover {
+    color: #2980b9 !important;
 }
